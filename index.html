@@ -5,14 +5,15 @@
 function myFunction() {
     localStorage.setItem("localKey", "localValue");
 }
-
+    var storedValue = localStorage.getItem("localKey");
+    var outText = document.getElementById("parag-1");
+    outText.innerHTML = "LocalStorage value is: " + storedValue;
 </script>
 </head>
 <body>
     <div>
-        <p id="parag-1"></p>
         <button onclick="myFunction()">Click me</button>
-        <p>Local storage value is {localStorage.getItem("localKey")}</p>
+        <p id="parag-1"></p>
     </div>
 </body>
 </html>
