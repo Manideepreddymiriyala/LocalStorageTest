@@ -5,9 +5,6 @@
 function myFunction() {
     localStorage.setItem("localKey", "localValue");
 }
-    var storedValue = localStorage.getItem("localKey");
-    var outText = document.getElementById("parag-1");
-    outText.innerHTML = "LocalStorage value is: " + storedValue;
 </script>
 </head>
 <body>
@@ -15,5 +12,14 @@ function myFunction() {
         <button onclick="myFunction()">Click me</button>
         <p id="parag-1"></p>
     </div>
+    <script>
+    var storedValue = localStorage.getItem("localKey");
+    var outText = document.getElementById("parag-1");
+    if (storedValue === null) {
+        outText.innerHTML = "LocalStorage value is empty";
+    } else {
+        outText.innerHTML = "LocalStorage value is: " + storedValue;
+    }
+    </script>
 </body>
 </html>
