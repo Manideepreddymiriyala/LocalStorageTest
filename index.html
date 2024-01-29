@@ -5,22 +5,14 @@
 function myFunction() {
     localStorage.setItem("localKey", "localValue");
 }
-function myFunction2() {
-    return {
-        <div>
-            <p> Local storage value is {localStorage.getItem("localKey")}</p>
-        </div>
-    }
-}
 
 </script>
 </head>
 <body>
     <div>
         <p id="parag-1"></p>
-        <p id="parag-2"></p>
         <button onclick="myFunction()">Click me</button>
-        <button onclick="myFunction2()">Click me2</button>
+        <p>Local storage value is {localStorage.getItem("localKey")}</p>
     </div>
 </body>
 </html>
